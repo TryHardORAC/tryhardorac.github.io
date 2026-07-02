@@ -37,6 +37,7 @@
         <li>Pricing and Revenue Management</li>
         <li>AI for OR</li>
         <li>OR for AI</li>
+        <li>Data-driven Decision Making</li>
       </ul>
     </section>
 
@@ -49,34 +50,48 @@
           <label for="research-search">Search research</label>
           <input id="research-search" type="search" placeholder="Search by title, author, topic, or status" autocomplete="off">
         </div>
+        <p id="research-empty" class="empty-state empty-state--near" hidden>No matching research items.</p>
 
         <div class="publication-list" id="research-list">
-          <article class="publication publication--interactive" data-search-item data-search="Self-Improving Neural Pruning Graph Neural Network Framework Scalable Mixed Bundle Pricing Liangyu Ding Chenghan Wu Guokai Li Zizhuo Wang AI for OR pricing revenue management mixed bundle pricing under review">
+          <article class="publication publication--interactive" data-search-item data-search="Self-Improving Neural Pruning Graph Neural Network Framework Scalable Mixed Bundle Pricing Liangyu Ding Guokai Li Zizhuo Wang Chenghan Wu AI for OR pricing revenue management mixed bundle pricing under review">
             <div class="publication__year">2026</div>
             <div>
               <h3><a href="https://arxiv.org/pdf/2509.22557" target="_blank" rel="noopener">Self-Improving Neural Pruning: A Graph Neural Network Framework for Scalable Mixed Bundle Pricing</a></h3>
-              <p><strong>Liangyu Ding</strong>, Chenghan Wu, Guokai Li, Zizhuo Wang</p>
+              <p><strong>Liangyu Ding</strong>, Guokai Li, Zizhuo Wang, Chenghan Wu</p>
               <p class="meta">Under review</p>
+              <p class="tldr"><strong>TLDR:</strong> Learn segment-product assignment patterns to prune large-scale mixed bundle pricing.</p>
               <div class="publication-actions">
-                <a href="https://arxiv.org/pdf/2509.22557" target="_blank" rel="noopener">PDF</a>
-                <a href="https://arxiv.org/abs/2509.22557" target="_blank" rel="noopener">arXiv</a>
+                <a href="slides/slide.pdf" target="_blank" rel="noopener">Slides</a>
                 <button type="button" class="text-button" data-abstract-toggle aria-expanded="false" aria-controls="abstract-bundle-pricing">Show abstract</button>
               </div>
               <div id="abstract-bundle-pricing" class="abstract" hidden>
                 <p>
-                  We study scalable mixed bundle pricing, where the seller must decide which product bundles
-                  to offer and how to price them under customer self-selection. The approach learns compact
-                  customer-product structure with a graph neural network, uses the predictions to prune the
-                  exponentially large bundle space, and then solves a smaller pricing optimization problem.
-                  A self-improvement loop further expands training to larger instances by using strong
-                  neural-pruning solutions as new labels.
+                  Mixed bundle pricing is a classic revenue management problem arising in industries such
+                  as e-commerce, tourism, and video games. It refers to designing product combinations
+                  (i.e., <em>bundles</em>) and determining their prices to maximize expected profit.
+                  Exact mixed bundling formulations capture this structure but are computationally
+                  intractable because the number of possible bundles grows exponentially with the number
+                  of products. We propose a graph neural network (GNN)-guided pruning framework for
+                  scalable (non-)additive bundle pricing. Instead of learning on the exponential
+                  bundle-level formulation, we encode each instance as a compact customer-product graph
+                  and train an edge-output GNN to learn the product-assignment probabilities from optimal
+                  mixed bundling solutions. The predicted probabilities are then converted into restricted
+                  candidate bundle families through fixed cutoff pruning and progressive cutoff pruning;
+                  the final prices and assignments are obtained by solving the mixed bundling formulation
+                  over the retained bundles. We further introduce a <em>GNN-guided local search</em> and
+                  an <em>iterative self-improvement procedure</em> for larger instances. The local search
+                  refines the retained bundle family by prioritizing high-confidence add/drop moves, while
+                  the iterative self-improvement procedure generates high-quality solutions on larger
+                  instances for retraining. Theoretically, we show that under mild distinguishability
+                  conditions the proposed edge-output GNN class is expressive enough to recover the
+                  optimal product-assignment mapping. Experiments show that the proposed policies recover
+                  over 98% of the optimal profit on small instances and outperform the well-known
+                  bundle-size pricing policy on larger instances with substantial runtime savings.
                 </p>
               </div>
             </div>
           </article>
         </div>
-
-        <p id="research-empty" class="empty-state" hidden>No matching research items.</p>
       </div>
     </section>
   </main>
