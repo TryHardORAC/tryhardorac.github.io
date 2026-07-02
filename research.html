@@ -18,6 +18,8 @@
         <a href="index.html#news">News</a>
         <a href="research.html" aria-current="page">Research</a>
         <a href="teaching.html">Coursework</a>
+        <a href="misc.html">Miscellaneous</a>
+        <a href="notes.html">Notes</a>
         <a href="CV/Liangyu_CV.pdf">CV</a>
       </nav>
     </div>
@@ -28,9 +30,14 @@
       <p class="eyebrow">Research</p>
       <h1>Research</h1>
       <p>
-        I am interested in large-scale optimization, learning-augmented optimization,
-        optimization for machine learning, and pricing and revenue management.
+        My research focuses on the intersection of operations research and artificial intelligence,
+        especially AI for OR, OR for AI, and pricing and revenue management.
       </p>
+      <ul class="tag-list" aria-label="Research interests">
+        <li>Pricing and Revenue Management</li>
+        <li>AI for OR</li>
+        <li>OR for AI</li>
+      </ul>
     </section>
 
     <section class="section-row">
@@ -38,14 +45,38 @@
         <h2>Publications and Preprints</h2>
       </div>
       <div class="section-body">
-        <article class="publication">
-          <div class="publication__year">2025</div>
-          <div>
-            <h3><a href="https://arxiv.org/abs/2509.22557" target="_blank" rel="noopener">Learning to Price Bundles: A GCN Approach for Mixed Bundling</a></h3>
-            <p><strong>Liangyu Ding</strong>, Chenghan Wu, Guokai Li, Zizhuo Wang</p>
-            <p class="meta">Preprint</p>
-          </div>
-        </article>
+        <div class="search-panel" role="search">
+          <label for="research-search">Search research</label>
+          <input id="research-search" type="search" placeholder="Search by title, author, topic, or status" autocomplete="off">
+        </div>
+
+        <div class="publication-list" id="research-list">
+          <article class="publication publication--interactive" data-search-item data-search="Self-Improving Neural Pruning Graph Neural Network Framework Scalable Mixed Bundle Pricing Liangyu Ding Chenghan Wu Guokai Li Zizhuo Wang AI for OR pricing revenue management mixed bundle pricing under review">
+            <div class="publication__year">2026</div>
+            <div>
+              <h3><a href="https://arxiv.org/pdf/2509.22557" target="_blank" rel="noopener">Self-Improving Neural Pruning: A Graph Neural Network Framework for Scalable Mixed Bundle Pricing</a></h3>
+              <p><strong>Liangyu Ding</strong>, Chenghan Wu, Guokai Li, Zizhuo Wang</p>
+              <p class="meta">Under review</p>
+              <div class="publication-actions">
+                <a href="https://arxiv.org/pdf/2509.22557" target="_blank" rel="noopener">PDF</a>
+                <a href="https://arxiv.org/abs/2509.22557" target="_blank" rel="noopener">arXiv</a>
+                <button type="button" class="text-button" data-abstract-toggle aria-expanded="false" aria-controls="abstract-bundle-pricing">Show abstract</button>
+              </div>
+              <div id="abstract-bundle-pricing" class="abstract" hidden>
+                <p>
+                  We study scalable mixed bundle pricing, where the seller must decide which product bundles
+                  to offer and how to price them under customer self-selection. The approach learns compact
+                  customer-product structure with a graph neural network, uses the predictions to prune the
+                  exponentially large bundle space, and then solves a smaller pricing optimization problem.
+                  A self-improvement loop further expands training to larger instances by using strong
+                  neural-pruning solutions as new labels.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p id="research-empty" class="empty-state" hidden>No matching research items.</p>
       </div>
     </section>
   </main>
@@ -53,8 +84,10 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <span>Liangyu Ding</span>
-      <span>Data Science - CUHK-Shenzhen</span>
+      <span>Operations Research - AI - CUHK-Shenzhen / Georgia Tech</span>
     </div>
   </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>
