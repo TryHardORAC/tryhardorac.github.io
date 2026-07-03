@@ -1,12 +1,14 @@
 # jemdoc: menu{menu}{teaching.html}
 # jemdoc: nofooter
-= Courseworks
+= Coursework
 
 == Relevant Courses
 === CUHK(SZ)
-- Operations Research: Optimization I, Advanced Convex Optimization, Optimization in Data Science and Machine Learning, Stochastic Process, Numerical Methods, Foundations of Data Science
-- Math & Stat: Partial Differential Equations, Statistical Inference, Statistical Modeling in Financial Markets
-- Computer Science: Deep Learning, Machine Learning, C/C+\+ Programming, Data Structures
+- Optimization: Advanced Convex Optimization (Ph.D), Dynamic Programming and Stochastic Control (Ph.D), Optimization in Data Science and Machine Learning
+- Probability, Statistics & Stochastic Modeling: Advanced Stochastic Process (Ph.D), Stochastic Simulation, Statistical Inference, Statistical Modeling in Financial Markets
+- Math: Partial Differential Equations, Mathematical Analysis, Numerical Methods
+- Machine Learning: Machine Learning, Deep Learning
+- Computer Science: C/C+\+ Programming, Data Structures
 
 
 ~~~
