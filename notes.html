@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Notes - Liangyu Ding</title>
   <meta name="description" content="Notes by Liangyu Ding.">
-  <link rel="stylesheet" href="jemdoc.css">
+  <link rel="stylesheet" href="jemdoc.css?v=20260704">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -40,18 +40,18 @@
           <label for="notes-search">Search notes</label>
           <input id="notes-search" type="search" placeholder="Search notes by keyword" autocomplete="off">
         </div>
+        <p id="notes-empty" class="empty-state empty-state--near" hidden>No matching notes.</p>
 
         <div class="note-list" id="notes-list">
           <article class="note-entry" data-search-item data-search="test placeholder note search">
             <div class="note-entry__date">Jul 2026</div>
             <div>
-              <h3>Test Note</h3>
-              <p>A placeholder entry for testing the notes page and search.</p>
+              <h3><a href="notes/test-note.html">Test Note</a></h3>
+              <p class="note-summary">A placeholder entry for testing the notes page and search.</p>
+              <p class="note-actions"><a href="notes/test-note.html">Read note</a></p>
             </div>
           </article>
         </div>
-
-        <p id="notes-empty" class="empty-state" hidden>No matching notes.</p>
       </div>
     </section>
   </main>
